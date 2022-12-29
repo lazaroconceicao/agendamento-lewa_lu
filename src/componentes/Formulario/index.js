@@ -4,6 +4,7 @@ import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 import Date from "../Date";
+import Hora from "../Hora";
 
 const Formulario = (props) => {
   const [nome, setNome] = useState("");
@@ -46,10 +47,9 @@ const Formulario = (props) => {
           valor={data}
           aoAlterado={(valor) => setData(valor)}
         />
-        <CampoTexto
+        <Hora
+          label="Horário"          
           obrigatorio={true}
-          label="Horário"
-          placeholder="Digitie o horário"
           valor={horario}
           aoAlterado={(valor) => setHorario(valor)}
         />
